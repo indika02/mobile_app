@@ -46,7 +46,7 @@ class AppBarWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                child: Icon(Icons.notifications)),
+                child: Icon(Icons.message_sharp)),
           ),
         ],
       ),

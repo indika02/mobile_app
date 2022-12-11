@@ -3,6 +3,7 @@ import '../Widgets/DrawerWidget.dart';
 import '../Widgets/PopularItemsWidget.dart';
 import '../Widgets/NewestItemWidget.dart';
 import '../Widgets/AppBarWidget.dart';
+import 'cartpage.dart';
 
 import 'package:flutter/cupertino.dart';
 
@@ -118,10 +119,12 @@ drawer:DrawerWidget(),
           ]
         ),
         child: FloatingActionButton(
-            onPressed: (){},
+            onPressed: (){
+            Navigator.pushNamed(context, "cartPage");
+            },
           child: Icon(CupertinoIcons.cart,
           size: 28,
-          color: Colors.red,
+          color:Color.fromARGB(255, 67, 7, 197),
           ),
           backgroundColor: Colors.white,
         ),

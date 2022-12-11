@@ -11,7 +11,7 @@ class PopularItemsWidget extends StatelessWidget {
           horizontal: 5,
         ),
         child: Row(children: [
-          for (int i = 0; i < 10; i++)
+          // for (int i = 0; i < 10; i++)
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 7,
@@ -38,13 +38,18 @@ class PopularItemsWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: Padding(
-                          padding: const EdgeInsets.all(11.0),
-                          child: Image.asset(
-                            "images/headset.jpg",
-                            height: 130,
+                      InkWell(
+                        onTap: (){
+                          Navigator.pushNamed(context, "itemPage");
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: const EdgeInsets.all(11.0),
+                            child: Image.asset(
+                              "images/headset.jpg",
+                              height: 130,
+                            ),
                           ),
                         ),
                       ),

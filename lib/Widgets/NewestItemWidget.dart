@@ -14,13 +14,13 @@ class NewstItemWidget extends StatelessWidget{
         child: Column(
           children: [
 
-            for(int i=0;i<10;i++)
+            // for(int i=0;i<10;i++)
              Padding(
               padding: EdgeInsets.symmetric(
                 vertical: 10),
               child: Container(
                 width: 380,
-                height: 150,
+                height: 160,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
@@ -36,7 +36,11 @@ class NewstItemWidget extends StatelessWidget{
                 child: Row(
                   children: [
                     InkWell(
-                      onTap: (){},
+                      onTap: (){
+
+                          Navigator.pushNamed(context, "itemPage");
+                        },
+
                       child:Container(
                         alignment: Alignment.center,
                         child: Image.asset("images/headset.jpg",
@@ -55,14 +59,14 @@ class NewstItemWidget extends StatelessWidget{
                           Text(
                             "Branded Products",
                             style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
                             "Your Best Choice",
                             style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -75,28 +79,28 @@ class NewstItemWidget extends StatelessWidget{
                            itemPadding: EdgeInsets.symmetric(horizontal: 4),
                            itemBuilder: (context,_)=>Icon(
                               Icons.star,
-                           color: Colors.red,
+                           color: Color.fromARGB(255, 197, 7, 178),
                            ),
                            onRatingUpdate: (index){},),
                           Text("\$10",
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.red,
+                            color: Color.fromARGB(255, 197, 7, 178),
                             fontWeight: FontWeight.bold
                           ),
                           ),
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 10),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Icon(Icons.favorite_border,
-                                color:Colors.red,
+                                color:Color.fromARGB(255, 197, 7, 178),
                                 size: 26,
                                 ),
                                 Icon(
                                 CupertinoIcons.cart,
-                                  color:Colors.red,
+                                  color:Color.fromARGB(255, 197, 7, 178),
                                   size: 26,
                                 ),
                               ],
