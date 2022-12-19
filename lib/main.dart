@@ -5,6 +5,7 @@ import 'Pages/HomePage.dart';
 import 'Pages/cartPage.dart';
 import 'Pages/itemPage.dart';
 import 'Pages/SplashScreen.dart';
+import 'Pages/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "HomePage": (context) => HomePage(),
         "cartPage": (context) => cartPage(),
         "itemPage": (context) => itemPage(),
+        "login_screen": (context) => login_screen(),
       },
     );
   }

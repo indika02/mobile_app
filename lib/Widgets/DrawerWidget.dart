@@ -29,12 +29,17 @@ class DrawerWidget extends StatelessWidget{
             leading: Icon(CupertinoIcons.home,
             color: Color.fromARGB(255, 67, 7, 197),
             ),
-            title: Text(
+            title: GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, "HomePage");
+              },
+              child: Text(
 
-              "Home",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+                "Home",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -42,11 +47,16 @@ class DrawerWidget extends StatelessWidget{
             leading: Icon(CupertinoIcons.person,
               color: Color.fromARGB(255, 67, 7, 197),
             ),
-            title: Text(
-              "MyAccount",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            title: GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, "cartPage");
+              },
+              child: Text(
+                "MyAccount",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -78,11 +88,16 @@ class DrawerWidget extends StatelessWidget{
             leading: Icon(Icons.exit_to_app,
               color: Color.fromARGB(255, 67, 7, 197),
             ),
-            title: Text(
-              "Log out",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            title: GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, "login_screen");
+              },
+              child: Text(
+                "Log out",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),

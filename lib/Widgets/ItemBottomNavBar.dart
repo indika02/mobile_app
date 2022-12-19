@@ -50,8 +50,12 @@ class ItemBottomNavBar extends StatelessWidget{
                       )
                   ),
                   icon:Icon(CupertinoIcons.cart),
-                  label: Text("Add to Cart",style: TextStyle(fontSize: 16,
-                      fontWeight: FontWeight.bold),),
+                  label: Text(
+                    "Add to Cart",
+                    style: TextStyle(fontSize: 16,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
 
                 ),
               ]

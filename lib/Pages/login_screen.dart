@@ -130,7 +130,12 @@ class InitState extends State<login_screen>{
               ),
             ),
             GestureDetector(
-              onTap: ()=>{},
+              // onTap: ()=>{
+              //
+              // },
+              onTap: ()=>{
+                Navigator.pushNamed(context, "HomePage"),
+              },
               child: Container(
                 margin: EdgeInsets.only(left:20,right: 20,top: 70,),
                 padding: EdgeInsets.only(left: 20,right: 20),
